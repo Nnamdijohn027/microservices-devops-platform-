@@ -5,26 +5,6 @@ A cloud-native microservices-based application designed to demonstrate modern De
 This project simulates a real-world distributed system where multiple services communicate via APIs and are prepared for deployment using modern DevOps tooling.
 
 
-ARCHITECTURE
-                ┌──────────────┐
-                │   Frontend   │
-                └──────┬───────┘
-                       │
-                ┌──────▼───────┐
-                │   API Service │
-                └──────┬───────┘
-                       │
-          ┌────────────┼────────────┐
-          ▼            ▼            ▼
-     Auth Service   Worker Service   Database
-          
-Infrastructure → Terraform
-Containers → Docker
-Orchestration → Kubernetes
-Monitoring → Prometheus + Grafana
-CI/CD → GitHub Actions
-
-
 TECH STACK
 | Layer                     | Technology           |
 | ------------------------- | -------------------- |
@@ -49,6 +29,13 @@ SERVICE DESCRIPTION
 | Kubernetes     | Container orchestration                  |
 
 
+PROJECT GOALS
+The goal of this project is to demonstrate practical experience with:
+- Building containerized applications
+= Deploying microservices to Kubernetes
+- Automating infrastructure provisioning
+- Implementing CI/CD pipelines
+- Monitoring distributed systems
 
 
 
