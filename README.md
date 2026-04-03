@@ -3,45 +3,45 @@ END-TO-END CLOUD DEVOPS PROJECT
 
 PROJECT OVERVIEW
 This project demonstrates a complete end-to-end DevOps platform implementing modern DevOps practices including Infrastructure as Code, CI/CD, containerization, Kubernetes orchestration, GitOps deployment, monitoring, and zero-downtime deployments.
-
 The platform automates the process of building, scanning, deploying, monitoring, and managing a containerized application in the cloud.
 
 
 PROJECT WORKFLOW
 Developer Push Code
-        ↓
+        ➡︎
 GitHub Repository
-        ↓
+        ➡︎
 GitHub Actions CI Pipeline
-        ↓
+        ➡︎
 Docker Image Build
-        ↓
+        ➡︎
 Security Scan (Trivy)
-        ↓
+        ➡︎
 Push Image to DockerHub
-        ↓
+        ➡︎
 ArgoCD GitOps Deployment
-        ↓
+        ➡︎
 Kubernetes Cluster (AWS EKS)
-        ↓
+        ➡︎
 Monitoring (Prometheus + Grafana)
 
 
 TOOLS USED
 This project integrates multiple DevOps tools and cloud services:
-CATEGORY	                       TOOLS
-Source Control	                 GitHub
-CI/CD	                           GitHub Actions
-Containerization	               Docker
-Container Orchestration	         Kubernetes
-GitOps	                         Argo CD
-Infrastructure as Code	         Terraform
-Cloud Provider	                 Amazon Web Services
-Monitoring	                     Prometheus
-Visualization	                   Grafana
-Package Manager	                 Helm
-Deployment Strategy	             Blue/Green Deployment
-Ingress	                         NGINX Ingress Controller
+
+  CATEGORY	                 TOOLS
+- Source Control	         GitHub
+- CI/CD	                         GitHub Actions
+- Containerization	         Docker
+- Container Orchestration	 Kubernetes
+- GitOps	                 Argo CD
+- Infrastructure as Code	 Terraform
+- Cloud Provider	         Amazon Web Services
+- Monitoring	                 Prometheus
+- Visualization	                 Grafana
+- Package Manager	         Helm
+- Deployment Strategy	         Blue/Green Deployment
+- Ingress	                 NGINX Ingress Controller
 
 
 FEATURES IMPLEMENTED
