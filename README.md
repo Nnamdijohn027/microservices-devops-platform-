@@ -1,85 +1,54 @@
-END-TO-END CLOUD DEVOPS PROJECT
+MICROSERVICES DEVOPS PLATFORM
+
+This repository implements a microservices architecture, where independent services handle different business functionalities.
+A cloud-native microservices-based application designed to demonstrate modern DevOps practices, including containerization, CI/CD automation, and scalable service architecture.
+This project simulates a real-world distributed system where multiple services communicate via APIs and are prepared for deployment using modern DevOps tooling.
 
 
-PROJECT OVERVIEW
-This project demonstrates a complete end-to-end DevOps platform implementing modern DevOps practices including Infrastructure as Code, CI/CD, containerization, Kubernetes orchestration, GitOps deployment, monitoring, and zero-downtime deployments.
-The platform automates the process of building, scanning, deploying, monitoring, and managing a containerized application in the cloud.
+ARCHITECTURE
+                ┌──────────────┐
+                │   Frontend   │
+                └──────┬───────┘
+                       │
+                ┌──────▼───────┐
+                │   API Service │
+                └──────┬───────┘
+                       │
+          ┌────────────┼────────────┐
+          ▼            ▼            ▼
+     Auth Service   Worker Service   Database
+          
+Infrastructure → Terraform
+Containers → Docker
+Orchestration → Kubernetes
+Monitoring → Prometheus + Grafana
+CI/CD → GitHub Actions
 
 
-PROJECT WORKFLOW
-Developer Push Code
-        ➡︎
-GitHub Repository
-        ➡︎
-GitHub Actions CI Pipeline
-        ➡︎
-Docker Image Build
-        ➡︎
-Security Scan (Trivy)
-        ➡︎
-Push Image to DockerHub
-        ➡︎
-ArgoCD GitOps Deployment
-        ➡︎
-Kubernetes Cluster (AWS EKS)
-        ➡︎
-Monitoring (Prometheus + Grafana)
+TECH STACK
+| Layer                     | Technology           |
+| ------------------------- | -------------------- |
+| Backend                   | Python (Flask)       |
+| Architecture              | Microservices        |
+| Containerization          | Docker               |
+| Orchestration (Next Step) | Kubernetes           |
+| CI/CD (Planned)           | GitHub Actions       |
+| Infrastructure (Planned)  | Terraform            |
+| Monitoring                | Prometheus + Grafana |
 
 
-TOOLS USED
-This project integrates multiple DevOps tools and cloud services:
-
-  CATEGORY	                 TOOLS
-- Source Control	         GitHub
-- CI/CD	                         GitHub Actions
-- Containerization	         Docker
-- Container Orchestration	 Kubernetes
-- GitOps	                 Argo CD
-- Infrastructure as Code	 Terraform
-- Cloud Provider	         Amazon Web Services
-- Monitoring	                 Prometheus
-- Visualization	                 Grafana
-- Package Manager	         Helm
-- Deployment Strategy	         Blue/Green Deployment
-- Ingress	                 NGINX Ingress Controller
+SERVICE DESCRIPTION
+| Service        | Description                              |
+| -------------- | ---------------------------------------- |
+| API Service    | Handles core application logic           |
+| Auth Service   | Manages authentication and authorization |
+| Worker Service | Processes background jobs                |
+| Frontend       | User interface                           |
+| Monitoring     | Metrics and dashboards                   |
+| Terraform      | Infrastructure provisioning              |
+| Kubernetes     | Container orchestration                  |
 
 
-FEATURES IMPLEMENTED
-1. CI Pipeline
-When code is pushed:
-- Application is built
-- Docker image is created
-- Container image is scanned for vulnerabilities
-- Image is pushed to DockerHub
-  
-2. GitOps Deployment
-Using ArgoCD:
-- Kubernetes automatically deploys changes from Git
-- No manual kubectl deployments
-- Git is the single source of truth
 
-3. Infrastructure as Code
-Using Terraform:
-- VPC created
-- Subnets created
-- EKS cluster created
-- Worker nodes provisioned
-- Infrastructure fully automated
 
-4. Kubernetes Deployment
-- Deployment
-- Service
-- Ingress
-- Liveness probes
-- Scaling
-- Blue/Green deployment
 
-5. Monitoring & Observability
-- Prometheus collects cluster metrics
-- Grafana visualizes metrics
-- Kubernetes dashboard monitoring
-
-7. Blue/Green Deployment
-- Zero downtime deployments
-- Traffic switching between environments
-- Easy rollback strategy
